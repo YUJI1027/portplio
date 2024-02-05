@@ -1,0 +1,19 @@
+<h1>トレーニングの記録</h1>
+
+<%= form_with model: @task, html: {class: "form-container"} do |form| %>
+
+<div class="form-input">
+  <%= form.label :タイトル %> <%= form.text_field :title %>
+</div>
+<div class="form-input">
+  <%= form.label :内容 %> <%= form.text_area :content %>
+</div>
+
+<div class="button-container">
+  <%= form.submit "保存", class: "link-button" %>
+  <%= link_to :back, class: do %>
+    <button class=back-button>戻る</button>
+  <% end %>
+</div>
+<% end %>
+

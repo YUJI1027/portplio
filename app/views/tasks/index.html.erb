@@ -1,0 +1,26 @@
+<h1>- 日々のメニューを記録しよう! -</h1>
+
+<div class="button-container">
+  <%= link_to "トレーニングの記録", new_task_path, class: "link-button" %>
+</div>
+
+<ul>
+  <% @tasks.each do |task| %>
+    <li>
+      <h2><%= task.title %></h2>
+      <p><%= task.content %></p>
+      <span>
+        <small><%= task.created_at %></small>
+      </span>
+      <div class="edit-delete-wrapper">
+        <%= link_to "編集", edit_task_path(task), class: "link-button" %>
+        <%= button_to "削除", task_path(task), method: :delete, 
+        class: "link-delete-button" %>
+      </div>
+    </li>
+  <% end %>
+</ul>
+
+<div class="button-container">
+  <%= link_to "戻る", 'http://127.0.0.1:5500/index%20ver2.html', class: 'back-button' %>
+</div>
