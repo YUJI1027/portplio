@@ -1,0 +1,281 @@
+/* 全体のフォント */
+html {
+  /* font-family: 'Noto Sans JP', sans-serif; */
+  font-family: 'Playfair Display', serif;
+  background-color: #16161a;
+}
+
+/* ヘッダーのロゴのフォント　*/
+.pop {
+  font-family: 'Playfair Display', serif;
+}
+.container {
+  width: 90%;
+  max-width: 1120px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* ヘッダー */
+header {
+  padding: 27px 0;
+}
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+}
+.logo span {
+  color: #80BA4A;
+}
+.header_menu li {
+  margin-left: 40px;
+  color: #ffffff;
+}
+.header_menu li a {
+  transition: .3s;
+}
+.header_menu li a:hover {
+  color: #80BA4A;
+  transition: .3s;
+}
+
+/* メイン */
+#hero {
+  background-image: url(/images/nathan-dumlao-NXMZxygMw8o-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 540px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 90px;
+  overflow: hidden;
+}
+#hero::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: #0000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+  z-index: 1;
+}
+.hero_inner {
+  z-index: 2;
+  color: #ffffff;
+  width: 100%;
+  text-align: center;
+}
+.hero_inner p {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+.hero_inner h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* トレーニング */
+#training { 
+  margin-bottom: 120px;
+}
+.title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #80BA4A;
+  margin-bottom: 40px;
+}
+#training h3 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  color: #ffffff;
+}
+#training h4 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  color: #ffffff;
+}
+#training .column-2 {
+  width: 48%;
+}
+#training a {
+  font-size: 18px;
+  border: solid 1px #ffffff;
+  border-radius: 100px;
+  display: inline-block;
+  width: 270px;
+  line-height: 60px;
+  text-align: center;
+  color: #ffffff;
+}
+.text {
+  line-height: 2;
+  color: #ffffff;
+}
+.content-img {
+  background-image: url(/images/mohamed-fareed-rbSNsoXk-3A-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 340px;
+  border-radius: 20px;
+}
+.heading {
+  font-family: 'Playfair Display', serif; /* 後でフォントを決めて、変更すること */
+  font-size: 200px;
+  font-weight: 700;
+  color: #80BA4A;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateY(-30%);
+  z-index: -1;
+}
+
+/* 食事 */
+#food {
+  margin-bottom: 120px;
+}
+.food_inner {
+  margin-top: 30px;
+}
+.column-40 {
+  width: 40%;
+}
+.column-55 {
+  width: 55%;
+}
+#food h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  color: #ffffff;
+}
+#food a {
+  font-size: 18px;
+  border: solid 1px #ffffff;
+  border-radius: 100px;
+  display: inline-block;
+  width: 270px;
+  line-height: 60px;
+  text-align: center;
+  color: #ffffff;
+}
+#food img {
+  border-radius: 20px;
+  height: 450px;
+}
+
+
+/* 動画 */
+#movie {
+  margin-bottom: 120px;
+}
+.movie_inner {
+  margin-bottom: 40px;
+}
+.column-50 {
+  width: 40%;
+}
+.column_50 {
+  width: 55%;
+}
+iframe {
+  border-radius: 20px;
+}
+#movie a {
+  font-size: 18px;
+  border: solid 1px #ffffff;
+  border-radius: 100px;
+  display: inline-block;
+  width: 270px;
+  line-height: 60px;
+  text-align: center;
+  color: #ffffff;
+}
+#movie h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  color: #ffffff;
+}
+
+/* お問い合わせ */
+.section {
+  padding: 60px;
+  margin-bottom: 130px;
+}
+.section .container {
+  max-width: 1080px;
+  width: 90%;
+  margin: 0 auto;
+}
+#contact h3 {
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+#contact hr {
+  border: solid 2px #80BA4A;
+  margin: 0 auto 40px;
+  width: 60px;
+}
+#contact form {
+  color: #ffffff;
+  max-width: 540px;
+  margin: 0 auto;
+}
+label {
+  display: block;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+#contact input, textarea {
+  background-color: #ffffff;
+  display: block;
+  width: 100%;
+  padding: 13px 16px;
+  margin-bottom: 30px;
+  color: #16161a;
+}
+#contact input[type=submit] {
+  text-align: center;
+  background-color: #7f5af0;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 20px 16px 22px;
+  letter-spacing: 6px;
+  border-radius: 6px;
+  transition-duration: .2s;
+  margin-bottom: 50px;
+}
+input[type=submit]:hover {
+  background-color: #80BA4A;
+}
+
+/* フッター */
+footer {
+  background-color: #ffffff;
+  text-align: center;
+  color: #16161a;
+  font-size: 11px;
+  letter-spacing: 1px;
+  padding: 20px 0;
+}

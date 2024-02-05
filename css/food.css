@@ -1,0 +1,197 @@
+/* 全体のフォント */
+html {
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: #16161a;
+}
+
+/* ヘッダーのロゴのフォント　*/
+.pop {
+  font-family: 'Playfair Display', serif;
+}
+.container {
+  width: 90%;
+  max-width: 1120px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* ヘッダー */
+header {
+  padding: 27px 0;
+}
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+}
+.logo span {
+  color: #80BA4A;
+}
+.header_menu li {
+  margin-left: 40px;
+  color: #ffffff;
+}
+.header_menu li a {
+  transition: .3s;
+}
+.header_menu li a:hover {
+  color: #80BA4A;
+  transition: .3s;
+}
+
+/* メイン */
+#hero {
+  background-image: url(/images/charles-gaudreault-xXofYCc3hqc-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 540px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 90px;
+  overflow: hidden;
+}
+#hero::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: #0000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+  z-index: 1;
+}
+.hero_inner {
+  z-index: 2;
+  color: #ffffff;
+  width: 100%;
+  text-align: center;
+}
+.hero_inner p {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+.hero_inner h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  font-family: 'Playfair Display', serif;
+}
+
+#food { 
+  margin-bottom: 120px;
+}
+.title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #80BA4A;
+  margin-bottom: 40px;
+  font-family: 'Playfair Display', serif;
+}
+#food h3 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  color: #ffffff;
+  font-family: 'Playfair Display', serif;
+}
+#food h4 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  color: #ffffff;
+  font-family: 'Playfair Display', serif;
+}
+#food a {
+  font-size: 18px;
+  border: solid 1px #ffffff;
+  border-radius: 100px;
+  display: inline-block;
+  width: 270px;
+  line-height: 60px;
+  text-align: center;
+  color: #ffffff;
+}
+.food_sub {
+  color: #ffffff;
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-family: 'Playfair Display', serif;
+}
+.food_sub select {
+  color: #ffffff;
+}
+input {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  border-bottom: solid 2px;
+}
+#food select {
+  font-family: 'Noto Sans JP', sans-serif;
+  text-align: center;
+  background-color: #ffffff;
+  color: black;
+  padding: 10px 16px;
+  letter-spacing: 1px;
+  border-radius: 6px;
+  margin-bottom: 30px;
+}
+.text {
+  line-height: 2;
+  color: #ffffff;
+}
+.heading {
+  font-family: 'Playfair Display', serif; /* 後でフォントを決めて、変更すること */
+  font-size: 200px;
+  font-weight: 700;
+  color: #80BA4A;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateY(-30%);
+  z-index: -1;
+}
+.btn {
+  font-size: 20px;
+  border: solid 1px #ffffff;
+  border-radius: 100px;
+  display: inline-block;
+  width: 270px;
+  line-height: 60px;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 30px;
+  transition: .2s;
+}
+.btn:hover {
+  border: solid 1px #80BA4A;
+  color: #80BA4A;
+  transition: .2s;
+}
+#food span {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* フッター */
+footer {
+  background-color: #ffffff;
+  text-align: center;
+  color: #16161a;
+  font-size: 11px;
+  letter-spacing: 1px;
+  padding: 20px 0;
+}
