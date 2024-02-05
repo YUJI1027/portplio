@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="text/javascript">
+    function keisan() {
+      let kcal1 = document.form1.foods1.options[document.form1.foods1.selectedIndex].value;
+
+      let kcal2 = document.form1.foods2.options[document.form1.foods2.selectedIndex].value;
+
+      let kcal3 = document.form1.foods3.options[document.form1.foods3.selectedIndex].value;
+
+      let total = parseInt(kcal1) + parseInt(kcal2) + parseInt(kcal3);
+
+      document.form1.field_total.value = total;
+    }
+  </script>
+
+  <style>
+    script {
+      color: aqua;
+    }
+  </style>
+</head>
+<body>
+  <form action="#" name="form1">
+  <table>
+    <tr>
+      <th>食事名</th>
+      <th>グラム(g)</th>
+    </tr>
+    <tr>
+      <td>肉・魚</td>
+      <td><select name="foods1" onchange="keisan()">
+      <option value="0"></option>
+      <option value="133">鶏肉(100g)</option>
+      <option value="338">牛肉(100g)</option>
+      <option value="127">鮭(100g)</option>
+      </select></td>
+    </tr>
+    <tr>
+      <td>白米系</td>
+      <td><select name="foods2" onchange="keisan()">
+      <option value="0"></option>
+      <option value="342">白米(100g)</option>
+      <option value="329">麦(100g)</option>
+      <option value="350">オートミール(100g)</option>
+      </select></td>
+    </tr>
+    <tr>
+      <td>野菜系</td>
+      <td><select name="foods3" onchange="keisan()">
+      <option value="0"></option>
+      <option value="10">あり</option>
+      <option value="0">なし</option>
+      </select></td>
+    </tr>
+    <tr>
+      <td align="right"><strong>カロリー合計</strong></td>
+      <td><input type="text" name="field_total" size="8" value="0"> kcal</td>
+    </tr>
+  </table>
+  </form>
+</body>
+</html>
+
+
+<dl>
+  <dt class="training_sub flex">- MENU -</dt>
+  <dd>
+    <select name="training_name">
+      <option value="" selected>部位</option>
+      <option value="chest">胸</option>
+      <option value="back">背中</option>
+      <option value="leg">脚</option>
+    </select>
+    <select name="training_name">
+      <option value="" selected>種目1</option>
+      <option value="chest">ベンチプレス</option>
+      <option value="back">懸垂</option>
+      <option value="leg">スクワット</option>
+    </select>
+    <select name="training_name">
+      <option value="" selected>種目2</option>
+      <option value="chest">チェストフライ</option>
+      <option value="back">プルダウン</option>
+      <option value="leg">ルーマニア</option>
+    </select>
+  </dd>
+</dl>
+
+<dl>
+  <dt class="training_sub flex">- TORAL TIME -</dt>
+  <dd>
+    <select name="food_name">
+      <option value="" selected>選択</option>
+      <option value="chest">30min</option>
+      <option value="back">1h</option>
+      <option value="leg">1h30min</option>
+      <option value="back">4h</option>
+    </select>
+  </dd>
+</dl>
+
+
+<form action="#" name="form1">
+  <table>
+    <tr>
+      <th>食材名</th>
+      <th>グラム(g)</th>
+    </tr>
+    <tr>
+      <td>肉・魚</td>
+      <td>
+      <select name="foods1" onchange="keisan()" >
+        <option value="0"></option>
+        <option value="133">鶏肉(100g)</option>
+        <option value="338">牛肉(100g)</option>
+        <option value="127">鮭(100g)</option>
+      </select>
+      </td>
+    </tr>
+    <tr>
+      <td>白米系</td>
+      <td><select name="foods2" onchange="keisan()">
+      <option value="0"></option>
+      <option value="342">白米(100g)</option>
+      <option value="329">麦(100g)</option>
+      <option value="350">オートミール(100g)</option>
+      </select></td>
+    </tr>
+    <tr>
+      <td>野菜</td>
+      <td><select name="foods3" onchange="keisan()">
+      <option value="0"></option>
+      <option value="10">あり</option>
+      <option value="0">なし</option>
+      </select></td>
+    </tr>
+    <tr>
+      <td align="right"><strong>カロリー合計</strong></td>
+      <td><input type="text" name="field_total" size="8" value="kcal"></td>
+    </tr>
+  </table>
+  </form>
