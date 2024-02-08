@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
   root :to => 'tasks#index'
-  get 'login', to: 'users#new', as: 'new_users'
-  post 'login', to: 'users#create', as: 'create_users'
-  get 'logout', to: 'users#destroy', as: 'destroy_users'
 
   resources :tasks, only: [:index, :new, :create, :edit, :update, :destroy]
   resources :users, only: [:new, :show, :edit, :create, :update]
