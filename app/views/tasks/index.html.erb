@@ -4,6 +4,18 @@
   <%= link_to "トレーニングの記録", new_task_path, class: "link-button" %>
 </div>
 
+<br>
+
+<div class="button-container">
+  <%= form_tag('/tasks', method: 'get') do %>
+    <%= label_tag(:title_key, '絞り込み:') %>
+    <%= text_field_tag(:title_key) %>
+    <%= submit_tag('Seatch') %> <%= link_to 'リセット', tasks_path %>
+  <% end %>
+</div>
+
+<br>
+
 <ul>
   <% @tasks.each do |task| %>
     <li>

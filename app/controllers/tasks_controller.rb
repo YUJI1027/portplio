@@ -2,7 +2,13 @@ class TasksController < ApplicationController
   before_action :set_task, only: [:edit, :update, :destroy]
 
   def index
-    @tasks = Task.all
+    # puts "Params: #{params.inspect}"
+    if params[:title_key]
+      @tasks = Task.where('title LIKE ?', "%#{params[:title_key]}%")
+      # puts "SQL Query: #{Task.where('title LIKE ?', "%#{params[:title_ley]}%").to_sql}"
+    else
+      @tasks = Task.all
+    end
   end
 
   def new
