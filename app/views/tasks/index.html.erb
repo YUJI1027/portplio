@@ -1,10 +1,4 @@
-<h1>- 日々のメニューを記録しよう! -</h1>
-
-<% if user_signed_in? %>
-  Logged in as <strong><%= current_user.email %></strong>
-  <%= link_to "設定", edit_user_registration_path %>
-  <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-<% end %>
+<h1>- あなたのトレーニングに関することをシェア・記録しよう! -</h1>
 
 <div class="button-container">
   <%= link_to "トレーニングの記録", new_task_path, class: "link-button" %>
@@ -16,7 +10,7 @@
   <%= form_tag('/tasks', method: 'get') do %>
     <%= label_tag(:title_key, '絞り込み:') %>
     <%= text_field_tag(:title_key) %>
-    <%= submit_tag('Seatch') %> <%= link_to 'リセット', tasks_path %>
+    <%= submit_tag('検索') %> <%= link_to 'リセット', tasks_path %>
   <% end %>
 </div>
 
@@ -27,13 +21,20 @@
     <li>
       <h2><%= task.title %></h2>
       <p><%= task.content %></p>
+      <% if task.user.name %>
+        <p><%= task.user.name %></p>
+      <% else %>
+        <p>User not available</p>
+      <% end %>
       <span>
         <small><%= task.created_at %></small>
       </span>
       <div class="edit-delete-wrapper">
-        <%= link_to "編集", edit_task_path(task), class: "link-button" %>
-        <%= button_to "削除", task_path(task), method: :delete, 
-        class: "link-delete-button" %>
+        <% if user_signed_in? && task.user_id == current_user.id %>
+          <%= link_to "編集", edit_task_path(task), class: "link-button" %>
+          <%= button_to "削除", task_path(task), method: :delete, 
+          class: "link-delete-button" %>
+        <% end %>
       </div>
     </li>
   <% end %>

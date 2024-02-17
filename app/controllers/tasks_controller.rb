@@ -15,6 +15,8 @@ class TasksController < ApplicationController
 
   def create
     @task = Task.new(task_params)
+    @task.user_id = current_user.id
+
     if @task.save
       redirect_to tasks_path
     else
@@ -27,21 +29,27 @@ class TasksController < ApplicationController
   end
 
   def update
-    if @task.update(task_params)
-      redirect_to tasks_path
+    if @task.user_id == current_user.id
+      if @task.update(task_params)
+        redirect_to tasks_path
+      else
+        render 'edit'
+      end
     else
-      render 'edit'
+      redirect_to tasks_path
     end
   end
 
   def destroy
-    @task.destroy
-    redirect_to tasks_path
+    if @task.user_id == current_user.id
+      @task.destroy
+      redirect_to tasks_path
+    end
   end
 
   private
   def task_params
-    params.require(:task).permit(:title, :content)
+    params.require(:task).permit(:title, :content, :user_id)
   end
 
   def set_task
