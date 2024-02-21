@@ -8,6 +8,19 @@
   max-width: 1080px;
 }
 
+.container-sub {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  margin-top: 10px;
+  text-align: right;
+  position: relative;
+}
+
+.log-msg {
+  text-align: center;
+}
+
 body {
   font-family: 'Playfair Display', serif;
   margin: 0;
@@ -20,6 +33,12 @@ small {
 }
 
 h1 {
+  color: #343a40;
+  text-align: center;
+  padding: 20px 0;
+}
+
+h2 {
   color: #343a40;
   text-align: center;
   padding: 20px 0;
@@ -51,6 +70,12 @@ ul li p {
 
 .button-container {
   text-align: center;
+}
+
+.button-container-sub {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
 
 .form-container {

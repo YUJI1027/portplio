@@ -1,10 +1,10 @@
-<h2>パスワード変更画面</h2>
+<h1>パスワード変更画面</h1>
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
   <%= f.hidden_field :reset_password_token %>
 
-  <div class="field">
+  <div class="button-container-sub">
     <%= f.label :"パスワード", "New password" %><br />
     <% if @minimum_password_length %>
       <em>(<%= @minimum_password_length %> 文字以上入力してください。)</em><br />
@@ -12,12 +12,12 @@
     <%= f.password_field :password, autofocus: true, autocomplete: "new-password" %>
   </div>
 
-  <div class="field">
+  <div class="button-container-sub">
     <%= f.label :"再度入力してください。", "Confirm new password" %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
-  <div class="actions">
+  <div class="button-container-sub">
     <%= f.submit "パスワードを変更する。" %>
   </div>
 <% end %>

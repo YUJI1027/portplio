@@ -1,14 +1,14 @@
-<h2>設定編集 <%= resource_name.to_s.humanize %></h2>
+<h1> <%= resource_name.to_s.humanize %> 設定編集 </h1>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
+  <div class="button-container-sub">
     <%= f.label :"メールアドレス" %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
-  <div class="field">
+  <div class="button-container-sub">
     <%= f.label :"お名前" %><br />
     <%= f.text_field :name %>
   </div>
@@ -17,35 +17,39 @@
     <div>現在、確認待ちです。もうしばらくお待ちください。: <%= resource.unconfirmed_email %></div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :"パスワード" %> <i>(もしパスワードを変更しない場合は空白のままにしてください。)</i><br />
+  <div class="button-container-sub">
+    <%= f.label :"パスワード" %> <br>
+      <i>(もしパスワードを変更しない場合は空白のままにしてください。)</i><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
     <% if @minimum_password_length %>
       <br />
-      <em><%= @minimum_password_length %> 文字以上で入力してください。</em>
+      <em><%= @minimum_password_length %>文字以上で入力してください。</em>
     <% end %>
   </div>
 
-  <div class="field">
+  <div class="button-container-sub">
     <%= f.label :"上記と同じパスワードを入力" %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
-  <div class="field">
-    <%= f.label :"現在のパスワード" %> <i>(変更完了を確認するために、現在のパスワードを入力する必要があります。)</i><br />
+  <div class="button-container-sub">
+    <%= f.label :"現在のパスワード" %> <br>
+      <i>(変更完了を確認するために、現在のパスワードを入力する必要があります。)</i><br />
     <%= f.password_field :current_password, autocomplete: "email" %>
   </div>
 
-  <div class="actions">
+  <div class="button-container-sub">
     <%= f.submit "更新" %>
   </div>
 <% end %>
 
-<h3>アカウントを削除する場合</h3>
+<h2>アカウントを削除する場合</h2>
 
-<div>
+<div class="button-container-sub">
   <%= button_to "アカウントの削除", registration_path(resource_name), 
   data: { confirm: "本当によろしいでしょうか?", turbo_confirm: "本当によろしいでしょうか?" }, method: :delete %>
 </div>
 
-<%= link_to "戻る", :back %>
+<div class="button-container-sub">
+  <%= link_to "戻る", :back %>
+</div>
