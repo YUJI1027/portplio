@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>- シェアしよう! -</title>
+    <title>- トレーニングをシェアしよう! -</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,13 +11,20 @@
   </head>
 
   <body>
-    <% if user_signed_in? %>
-      <strong><%= current_user.name %> としてログイン中です。</strong>
-      <%= link_to "設定", edit_user_registration_path, :class => "navbar-link" %> |
-      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, :class => "navbar-link" %>
-    <% end %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <div class="container-sub">
+      <% if user_signed_in? %>
+        <strong><%= current_user.name %> でログイン中 </strong>
+        <br>
+        <%= link_to "設定", edit_user_registration_path %> <strong> | </strong>
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+        <script src="https://kit.fontawesome.com/484e6509e8.js" crossorigin="anonymous"></script>
+      <% end %>
+    </div>
+
+    <div class="log-msg">
+      <p><%= notice %></p>
+      <p><%= alert %></p>
+    </div>
+      <%= yield %>
   </body>
 </html>

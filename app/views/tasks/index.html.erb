@@ -35,6 +35,17 @@
           <%= button_to "削除", task_path(task), method: :delete, 
           class: "link-delete-button" %>
         <% end %>
+        <% if current_user.already_liked?(task) %>
+          <%= button_to task_likes_path(task), method: :delete do %>
+            <i class="fas fa-heart"></i>
+          <% end %>
+          <%= task.likes.count %>
+        <% else %>
+          <%= button_to task_likes_path(task), method: :post do %>
+            <i class="far fa-heart"></i>
+          <% end %>
+          <%= task.likes.count %>
+        <% end %>
       </div>
     </li>
   <% end %>
