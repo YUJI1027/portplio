@@ -22,6 +22,7 @@ module Hello
 
     config.active_record.sqlite3_production_warning = false
 
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
