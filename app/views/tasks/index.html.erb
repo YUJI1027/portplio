@@ -1,4 +1,4 @@
-<h1>- あなたのトレーニングに関することをシェア・記録しよう! -</h1>
+<h1>- トレーニングに関することをシェア・記録しよう! -</h1>
 
 <div class="button-container">
   <%= link_to "トレーニングの記録", new_task_path, class: "link-button" %>
@@ -19,7 +19,7 @@
 <ul>
   <% @tasks.each do |task| %>
     <li>
-      <h2><%= task.title %></h2>
+      <h2>テーマ： <%= task.title %></h2>
       <p><%= task.content %></p>
       <% if task.user.name %>
         <p><%= task.user.name %></p>
