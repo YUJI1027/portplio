@@ -1,28 +1,8 @@
-<<<<<<< HEAD
-# portplio1
-=======
+# App name
+- トレーニングシェアアプリ -
+  
+🏋️ご自身のトレーニングメニューに他の人にシェアしよう💪
+
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
->>>>>>> 4e78494 (Initial commit)
+<img width="690" alt="スクリーンショット 2024-03-12 16 17 48" src="https://github.com/YUJI1027/portplio1/assets/145771966/115cf986-46d0-41d3-9f29-e65107d6530d">
