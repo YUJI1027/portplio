@@ -73,5 +73,5 @@ Rails.application.configure do
 
   # Raise error when a before_action's only/except options reference missing actions
   config.action_controller.raise_on_missing_callback_actions = false
-  config.hosts<<rails-release-app-ccac73256fd8.herokuapp.com
+  config.hosts<<"rails-app-yuji-6c546b1edceb.herokuapp.com"
 end
