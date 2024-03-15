@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  root to: 'tasks#index'
-  resources :tasks, only: [:index, :new, :create, :edit, :update, :destroy]
   devise_for :users  
+  root to: 'tasks#new'
+  resources :tasks, only: [:index, :new, :create, :edit, :update, :destroy]
+
 
   resources :tasks do
     resource :likes, only: [:create, :destroy]
