@@ -32,15 +32,14 @@
       <div class="edit-delete-wrapper">
         <% if user_signed_in? && task.user_id == current_user.id %>
           <%= link_to "編集", edit_task_path(task), class: "link-button" %>
-          <%= button_to "削除", task_path(task), method: :delete, 
-          class: "link-delete-button" %>
+          <%= button_to "削除", task_path(task), method: :delete, class: "link-delete-button" %>
         <% end %>
         <% if current_user && current_user.already_liked?(task) %>
-          <%= button_to task_likes_path(task), method: :delete do %>
+          <%= button_to task_likes_path(task), class: "liked-delete-button", method: :delete do %>
             <i class="fas fa-heart"></i>
           <% end %>
         <% else %>
-          <%= button_to task_likes_path(task), method: :post do %>
+          <%= button_to task_likes_path(task), class: "liked-button", method: :post do %>
             <i class="far fa-heart"></i>
           <% end %>
         <% end %>

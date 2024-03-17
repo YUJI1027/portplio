@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users  
-  root to: 'tasks#new'
+  root to: 'tasks#index'
   resources :tasks, only: [:index, :new, :create, :edit, :update, :destroy]
 
 
@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     resource :likes, only: [:create, :destroy]
   end
 
-  get "up" => "rails/health#show", as: :rails_health_check
+  # get "up" => "rails/health#show", as: :rails_health_check
 
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'
