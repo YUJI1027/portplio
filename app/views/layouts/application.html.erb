@@ -14,7 +14,7 @@
   <body>
     <div class="container-sub">
       <% if user_signed_in? %>
-        <strong><%= current_user.name %> でログイン中 </strong>
+        <strong>  <%= current_user.name %> でログイン中 </strong>
         <br>
         <%= link_to "設定", edit_user_registration_path %> <strong> | </strong>
         <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>

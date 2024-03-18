@@ -15,6 +15,7 @@
   margin-top: 10px;
   text-align: right;
   position: relative;
+  background-color: gainsboro;
 }
 
 .log-msg {
@@ -114,6 +115,12 @@ ul li p {
   border-radius: 5px;
   text-align: center;
   cursor: pointer;
+  transition: .3s;
+}
+.link-button:hover {
+  background-color: blue;
+  color: #fff;
+  transition: .3s;
 }
 
 .back-button {
@@ -126,6 +133,11 @@ ul li p {
   border-radius: 5px;
   text-align: center;
   cursor: pointer;
+  transition: .3s;
+}
+.back-button:hover {
+  background-color: #495057;
+  transition: .3s;
 }
 
 .link-delete-button {
@@ -141,6 +153,11 @@ ul li p {
   margin-left: 10px;
   margin-right: 10px;
   cursor: pointer;
+  transition: .3s;
+}
+.link-delete-button:hover {
+  background-color: orangered;
+  transition: .3s;
 }
 
 .liked-button {
@@ -153,7 +170,13 @@ ul li p {
   text-align: center;
   margin-right: 10px;
   border: 1px solid;
+  transition: .3s;
 }
+.liked-button:hover {
+  color: greenyellow;
+  transition: .3s;
+}
+
 .liked-delete-button {
   display: inline-block;
   background-color: ghostwhite;
